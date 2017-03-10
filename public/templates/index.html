@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="piEye">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>My PiEye</title>
+
+    <!-- SPELLS -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>     
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
+    <!-- SCROLLS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/piEye.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="static/controllers/baseController.js"></script>
+    <script type="text/javascript" src="static/services/socketio.js"></script>
+    <script type="text/javascript" src="static/services/mailer.js"></script>
+    <!-- <script type="text/javascript" src="static/services/capture.js"></script> -->
+
+
+
+</head>
+
+<body ng-controller="baseController as base">
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <img src="" id="stream" style="height: 500px; width:100%" >
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="text-center"> 
+                <div class="btn-group">
+                    <label class="btn btn-primary" ng-model="base.selShootMode" uib-btn-radio="'image'">Image</label>
+                    <label class="btn btn-primary" ng-model="base.selShootMode" uib-btn-radio="'video'">Video</label>
+                    <label class="btn btn-primary" ng-model="base.selShootMode" uib-btn-radio="'timelapse'">Time Lapse</label>
+                    <label class="btn btn-primary" ng-model="base.selShootMode" uib-btn-radio="'livestream'">Live Stream</label>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="text-center"> 
+                <button type="button" class="btn btn-danger btn-circle btn-xl" ng-class="base.started ? 'btn-warning' : 'btn-danger'" ng-click="base.clickButton()"></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "piEye",
+  "version": "1.0.0",
+  "description": "use picam and motion detector for home surveillance",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vidhisampat/SmartHome_Surveillance.git"
+  },
+  "keywords": [
+    "smarthome",
+    "surveillance",
+    "picam",
+    "raspi",
+    "motion"
+  ],
+  "author": "Vidhi Sampat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vidhisampat/SmartHome_Surveillance/issues"
+  },
+  "homepage": "https://github.com/vidhisampat/SmartHome_Surveillance#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "socket.io": "latest"
+  }
+}
